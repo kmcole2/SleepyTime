@@ -8,8 +8,8 @@
 
 import UIKit
 
-var selectedTime = 0;
-
+var selectedTime = Date();
+var isBedTime = false;
 class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -28,8 +28,10 @@ class SecondViewController: UIViewController {
         {
         case 0:
             textLabel.text = "First Segment Selected"
+            isBedTime = false
         case 1:
             textLabel.text = "Second Segment Selected"
+            isBedTime = true
         default:
             break
         }
@@ -41,7 +43,12 @@ class SecondViewController: UIViewController {
     
         var strDate = dateFormatter.string(from: timePicker.date)
         textLabel.text = strDate
+        selectedTime = timePicker.date
+        print(isBedTime);
     }
+    // if RISE TIME, then CLOCK TIME -14min -3hr*x
+    // if BED TIME, then +14 min, + 3hr*x
+    
     /*
     // MARK: - Navigation
 

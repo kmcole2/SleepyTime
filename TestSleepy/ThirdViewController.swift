@@ -33,15 +33,17 @@ class ThirdViewController: UIViewController {
         
         // *** Get Individual components from date ***
         let hour = calendar.component(.hour, from: date as Date)
-        let minutes = calendar.component(.minute, from: date as Date)
+        let minutes = calendar.component(.minute, from: date as Date) + 14
         let seconds = calendar.component(.second, from: date as Date)
 
-        Label1.text = "\((hour-4)%24 ):\(minutes)";
-        Label2.text = "\( (hour-4+3)%24 ):\(minutes)";
-        Label3.text = "\( (hour-4+6)%24 ):\(minutes)"
-        Label4.text = "\( (hour-4+9)%24 ):\(minutes)";
-        Label5.text = "\( (hour-4+12)%24 ):\(minutes)";
-        Label6.text = "\( (hour-4+15)%24 ):\(minutes)";
+
+        
+        Label1.text = "\( (hour+24-4+1)%24 ):\(String(format: "%02d", (minutes + 30)%60))";
+        Label2.text = "\( (hour+24-4+3)%24 ):\(String(format: "%02d", minutes))";
+        Label3.text = "\( (hour+24-4+4)%24 ):\(String(format: "%02d", (minutes + 30)%60))"
+        Label4.text = "\( (hour+24-4+6)%24 ):\(String(format: "%02d", minutes))";
+        Label5.text = "\( (hour+24-4+7)%24 ):\(String(format: "%02d", (minutes + 30)%60))";
+        Label6.text = "\( (hour+24-4+9)%24 ):\(String(format: "%02d", minutes))";
 
         
     }
