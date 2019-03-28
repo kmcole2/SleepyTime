@@ -36,13 +36,19 @@ class ThirdViewController: UIViewController {
         let minutes = calendar.component(.minute, from: date as Date) + 14
         let seconds = calendar.component(.second, from: date as Date)
 
-
+        func calculateOverflow1(minute: Int) ->Int {
+            if ((minute + 30) > 60){
+                return 1;
+            } else {
+                return 0;
+            }
+        }
         
-        Label1.text = "\( (hour+24-4+1)%24 ):\(String(format: "%02d", (minutes + 30)%60))";
+        Label1.text = "\( (hour+24-4+1+calculateOverflow1(minute: minutes))%24 ):\(String(format: "%02d", (minutes + 30)%60))";
         Label2.text = "\( (hour+24-4+3)%24 ):\(String(format: "%02d", minutes))";
-        Label3.text = "\( (hour+24-4+4)%24 ):\(String(format: "%02d", (minutes + 30)%60))"
+        Label3.text = "\( (hour+24-4+4+calculateOverflow1(minute: minutes))%24 ):\(String(format: "%02d", (minutes + 30)%60))"
         Label4.text = "\( (hour+24-4+6)%24 ):\(String(format: "%02d", minutes))";
-        Label5.text = "\( (hour+24-4+7)%24 ):\(String(format: "%02d", (minutes + 30)%60))";
+        Label5.text = "\( (hour+24-4+7+calculateOverflow1(minute: minutes))%24 ):\(String(format: "%02d", (minutes + 30)%60))";
         Label6.text = "\( (hour+24-4+9)%24 ):\(String(format: "%02d", minutes))";
 
         
