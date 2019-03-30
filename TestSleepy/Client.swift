@@ -44,11 +44,17 @@ class Client: NSObject, StreamDelegate {
     }
     
     func sendMessage(message: String) {
-        let data = "\(message)".data(using: .ascii)!
-        
-        _ = data.withUnsafeBytes { outputStream.write($0, maxLength: data.count) }
-        print(message);
-        print("Message sent")
+
+        if(message == ""){
+            print("no data sent")
+        }
+        else{
+            let data = "\(message)".data(using: .ascii)!
+            _ = data.withUnsafeBytes { outputStream.write($0, maxLength: data.count) }
+            print(message);
+            print("Message sent")
+        }
+
     }
     
     func stopChatSession() {

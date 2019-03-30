@@ -18,7 +18,7 @@ class SecondViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBOutlet weak var textLabel: UILabel!
+//    @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
@@ -27,10 +27,10 @@ class SecondViewController: UIViewController {
         switch segmentedControl.selectedSegmentIndex
         {
         case 0:
-            textLabel.text = "First Segment Selected"
+//            textLabel.text = "First Segment Selected"
             isBedTime = false
         case 1:
-            textLabel.text = "Second Segment Selected"
+//            textLabel.text = "Second Segment Selected"
             isBedTime = true
         default:
             break
@@ -42,7 +42,7 @@ class SecondViewController: UIViewController {
         dateFormatter.dateFormat = "HH:mm"
     
         var strDate = dateFormatter.string(from: timePicker.date)
-        textLabel.text = strDate
+//        textLabel.text = strDate
         selectedTime = timePicker.date
         print(isBedTime);
     }

@@ -8,9 +8,14 @@
 
 import UIKit
 
+var client = Client()
+//let client = Client()
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
+        //set up network connection
+        client.setupNetworkCommunication()
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
