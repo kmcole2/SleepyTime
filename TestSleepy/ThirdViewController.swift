@@ -10,9 +10,16 @@ import UIKit
 
 class ThirdViewController: UIViewController {
 
+    let client  = Client()
+    
+    @IBAction func TestButtonOnClicked(_ sender: Any) {
+        client.sendMessage(message: "test")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //set up network connection
+        client.setupNetworkCommunication()
         // Do any additional setup after loading the view.
         // *** Create date ***
         let date = NSDate()

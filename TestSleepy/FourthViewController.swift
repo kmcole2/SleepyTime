@@ -24,11 +24,6 @@ class FourthViewController: UIViewController {
         }
         return 0;
     }
-//        if ((minute - 14 + 30) > 60){
-//            return 1
-//        } else {
-//            return 0;
-//        }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +52,7 @@ class FourthViewController: UIViewController {
                 underflow = -1;
                 minutes = 60 + minutes
             }
-//            minutes = (minutes - 14)
+
             TimeLabel6.text = "\( (hour+24-2 + underflow + calculateOverflow1(minute: minutes))%24 ):\(String(format: "%02d", (minutes + 60 - 30)%60))";
             TimeLabel5.text = "\( (hour+24-3 + underflow)%24 ):\(String(format: "%02d", minutes))";
             TimeLabel4.text = "\( (hour+24-5 + underflow + calculateOverflow1(minute: minutes))%24 ):\(String(format: "%02d", (minutes + 60 - 30)%60))";
