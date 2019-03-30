@@ -13,7 +13,7 @@ class ThirdViewController: UIViewController {
     let client  = Client()
     
     @IBAction func TestButtonOnClicked(_ sender: Any) {
-        client.sendMessage(message: "test")
+        client.sendMessage(message: "testMessage\n")
     }
     
     override func viewDidLoad() {
