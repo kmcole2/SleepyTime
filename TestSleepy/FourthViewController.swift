@@ -32,17 +32,22 @@ class FourthViewController: UIViewController {
         return 0;
     }
     
+    @IBOutlet weak var View4Label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        View4Label.lineBreakMode = NSLineBreakMode.byWordWrapping
+        View4Label.numberOfLines = 0
+        
         let calendar = Calendar.current
-        var hour = calendar.component(.hour, from: selectedTime)
+        let hour = calendar.component(.hour, from: selectedTime)
         var minutes = calendar.component(.minute, from: selectedTime)
         let seconds = calendar.component(.second, from: selectedTime)
         print("hours = \(hour):\(minutes):\(seconds)")
         
         if(isBedTime){
-            InfoText.text = "BEDTIME, It takes the average person 14 minutes to fall asleep...  \n\n If you lie in bed at " + String(format: "%02d", hour ) + ":" + String(format: "%02d", minutes) + ", you should try and wake up at one of the following times:"
+            View4Label.text = "It takes the average person 14 minutes to fall asleep...  \n\n If you lie in bed at " + String(format: "%02d", hour ) + ":" + String(format: "%02d", minutes) + ", you should try and wake up at one of the following times:"
             minutes = minutes + 14
             label1 = "\( (hour+24+1 + calculateOverflow1(minute: minutes))%24 ):\(String(format: "%02d", (minutes + 30)%60))";
             label2 = "\( (hour+24+3)%24 ):\(String(format: "%02d", minutes))";
@@ -51,14 +56,8 @@ class FourthViewController: UIViewController {
             label5 = "\( (hour+24+7 + calculateOverflow1(minute: minutes))%24 ):\(String(format: "%02d", (minutes + 30)%60))";
             label6 = "\( (hour+24+9)%24 ):\(String(format: "%02d", minutes))";
             
-            //            TimeLabel1.text = "\( (hour+24+1 + calculateOverflow1(minute: minutes))%24 ):\(String(format: "%02d", (minutes + 30)%60))";
-            //            TimeLabel2.text = "\( (hour+24+3)%24 ):\(String(format: "%02d", minutes))";
-            //            TimeLabel3.text = "\( (hour+24+4 + calculateOverflow1(minute: minutes))%24 ):\(String(format: "%02d", (minutes + 30)%60))"
-            //            TimeLabel4.text = "\( (hour+24+6)%24 ):\(String(format: "%02d", minutes))";
-            //            TimeLabel5.text = "\( (hour+24+7 + calculateOverflow1(minute: minutes))%24 ):\(String(format: "%02d", (minutes + 30)%60))";
-            //            TimeLabel6.text = "\( (hour+24+9)%24 ):\(String(format: "%02d", minutes))";
         } else {
-            InfoText.text = "RISETIME,It takes the average person 14 minutes to fall asleep...  \n\n If you want to wake up at " + String(format: "%02d", hour ) + ":" + String(format: "%02d", minutes) + ", you should get in bed at one of the following times:"
+            View4Label.text = "It takes the average person 14 minutes to fall asleep...  \n\n If you want to wake up at " + String(format: "%02d", hour ) + ":" + String(format: "%02d", minutes) + ", you should get in bed at one of the following times:"
             var underflow = 0;
             
             minutes = (minutes - 14)

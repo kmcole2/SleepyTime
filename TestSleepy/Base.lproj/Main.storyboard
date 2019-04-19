@@ -18,49 +18,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43B-rN-ISF">
-                                <rect key="frame" x="147" y="442" width="75" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Pick a time"/>
-                                <connections>
-                                    <action selector="PickATimeClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VCZ-y6-ZRR"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="I'm going to bed now, when should I wake up?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SvF-3r-hUN">
-                                <rect key="frame" x="72" y="243" width="240" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="I need to pick a certain time, when should I wake up or go to bed?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aRn-UE-8xC">
-                                <rect key="frame" x="72" y="386" width="240" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9g2-jx-gPI">
-                                <rect key="frame" x="122" y="301" width="124" height="30"/>
+                                <rect key="frame" x="108" y="338" width="158" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Going to Bed Now"/>
                                 <connections>
                                     <action selector="GoingNowClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ioj-Q3-tyv"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sleepy Time App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lK-4p-mPP">
-                                <rect key="frame" x="41" y="130" width="293" height="47"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sleepy Time Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lK-4p-mPP">
+                                <rect key="frame" x="46" y="104" width="282" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="39"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I'm going to bed now, when should I wake up?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hok-3h-UTO">
+                                <rect key="frame" x="67" y="251" width="240" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I need to pick a certain time, when should I wake up or go to bed?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URi-hZ-kTp">
+                                <rect key="frame" x="67" y="420" width="240" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43B-rN-ISF">
+                                <rect key="frame" x="140" y="511" width="94" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Pick a time"/>
+                                <connections>
+                                    <action selector="PickATimeClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VCZ-y6-ZRR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="npc-5Q-8k6"/>
                     <connections>
+                        <outlet property="AppTitle" destination="8lK-4p-mPP" id="1kL-EV-Eyb"/>
+                        <outlet property="GoingToBedNow" destination="hok-3h-UTO" id="tfg-80-A33"/>
+                        <outlet property="PickATime" destination="URi-hZ-kTp" id="LRu-pp-iH0"/>
                         <segue destination="DW9-Pc-xOa" kind="show" identifier="TestSegue" id="tmB-UN-2jm"/>
                         <segue destination="oCT-VR-8Ye" kind="show" identifier="PickTimeClick" id="tcc-F0-1bU"/>
                     </connections>
@@ -135,13 +140,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="It takes the average person 14 minutes to fall asleep... If you lie in bed now, try to wake up at one of the following times..." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="s27-8H-Y3U">
-                                <rect key="frame" x="38" y="94" width="298" height="163"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u42-aE-lpG">
                                 <rect key="frame" x="160" y="276" width="58" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -196,6 +194,13 @@
                                     <action selector="Button6:" destination="OlT-3E-TOA" eventType="touchUpInside" id="mpO-RB-aCg"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="It takes the average person 14 minutes to fall asleep... If you lie in bed now, try to wake up at one of the following times..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EM1-f8-hJO">
+                                <rect key="frame" x="48" y="104" width="278" height="146"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gls-Mt-6Pi"/>
@@ -207,7 +212,7 @@
                         <outlet property="Button4" destination="XIT-Rr-1af" id="EPP-Tu-cav"/>
                         <outlet property="Button5" destination="zI4-kP-p6L" id="TPb-MV-kmb"/>
                         <outlet property="Button6" destination="5lE-xA-Zuu" id="sGP-I7-o7C"/>
-                        <outlet property="InfoText" destination="s27-8H-Y3U" id="XHu-rj-Evf"/>
+                        <outlet property="View4Label" destination="EM1-f8-hJO" id="GEa-tN-j8h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wwP-9t-Sur" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -222,13 +227,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="It takes the average person 14 minutes to fall asleep... If you lie in bed now, try to wake up at one of the following times..." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2ta-qs-VWP">
-                                <rect key="frame" x="38" y="109" width="298" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vu3-0x-tmB">
                                 <rect key="frame" x="160" y="249" width="58" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -283,6 +281,13 @@
                                     <action selector="Button6:" destination="DW9-Pc-xOa" eventType="touchUpInside" id="RYU-2F-hoa"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="It takes the average person 14 minutes to fall asleep... If you lie in bed now, try to wake up at one of the following times..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkU-ox-tjj">
+                                <rect key="frame" x="38" y="80" width="298" height="161"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vpo-3K-bhY"/>
@@ -294,6 +299,7 @@
                         <outlet property="Button4" destination="mJg-x8-LV3" id="3b0-DE-Kn3"/>
                         <outlet property="Button5" destination="feK-Zv-J5p" id="sbZ-Fb-CIn"/>
                         <outlet property="Button6" destination="o3t-gv-6ah" id="flK-e1-y2X"/>
+                        <outlet property="View3Label" destination="rkU-ox-tjj" id="SUW-r0-MDy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GCt-wZ-xQN" userLabel="First Responder" sceneMemberID="firstResponder"/>

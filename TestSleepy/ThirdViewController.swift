@@ -48,10 +48,16 @@ class ThirdViewController: UIViewController {
         client.sendMessage(message: label6 + "\n")
     }
     
+    @IBOutlet weak var View3Label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         // *** Create date ***
+        
+        View3Label.lineBreakMode = NSLineBreakMode.byWordWrapping
+        View3Label.numberOfLines = 0
+        
         let date = NSDate()
         
         // *** create calendar object ***

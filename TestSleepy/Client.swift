@@ -23,7 +23,7 @@ class Client: NSObject, StreamDelegate {
         var writeStream: Unmanaged<CFWriteStream>?
         
         CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault,
-                                           "localhost" as CFString,
+                                           "192.168.1.69" as CFString,
                                            5432,
                                            &readStream,
                                            &writeStream)
