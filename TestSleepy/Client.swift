@@ -16,9 +16,8 @@ class Client: NSObject, StreamDelegate {
     
     let maxReadLength = 1024
     
-    //1) Set up the input and output streams for message sending
+    //Set up the input and output streams
     func setupNetworkCommunication() {
-//        let host: String // future for setting up custom server IP
         var readStream: Unmanaged<CFReadStream>?
         var writeStream: Unmanaged<CFWriteStream>?
         
@@ -43,6 +42,7 @@ class Client: NSObject, StreamDelegate {
         print("setupNetworkCommunication setup completed")
     }
     
+    //Sending a message to the remote server
     func sendMessage(message: String) {
 
         if(message == ""){
@@ -57,7 +57,8 @@ class Client: NSObject, StreamDelegate {
 
     }
     
-    func stopChatSession() {
+    //Closing the in/out streams
+    func stopSession() {
         inputStream.close()
         outputStream.close()
     }

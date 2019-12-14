@@ -66,12 +66,6 @@ class FourthViewController: UIViewController {
                 minutes = 60 + minutes
             }
             
-            //            TimeLabel6.text = "\( (hour+24-2 + underflow + calculateOverflow1(minute: minutes))%24 ):\(String(format: "%02d", (minutes + 60 - 30)%60))";
-            //            TimeLabel5.text = "\( (hour+24-3 + underflow)%24 ):\(String(format: "%02d", minutes))";
-            //            TimeLabel4.text = "\( (hour+24-5 + underflow + calculateOverflow1(minute: minutes))%24 ):\(String(format: "%02d", (minutes + 60 - 30)%60))";
-            //            TimeLabel3.text = "\( (hour+24-6 + underflow)%24 ):\(String(format: "%02d", minutes))";
-            //            TimeLabel2.text = "\( (hour+24-8 + underflow + calculateOverflow1(minute: minutes))%24 ):\(String(format: "%02d", (minutes + 60 - 30)%60))";
-            //            TimeLabel1.text = "\( (hour+24-9 + underflow)%24 ):\(String(format: "%02d", minutes))";//////
             label6 = "\( (hour+24-2 + underflow + calculateOverflow1(minute: minutes))%24 ):\(String(format: "%02d", (minutes + 60 - 30)%60))";
             label5 = "\( (hour+24-3 + underflow)%24 ):\(String(format: "%02d", minutes))";
             label4 = "\( (hour+24-5 + underflow + calculateOverflow1(minute: minutes))%24 ):\(String(format: "%02d", (minutes + 60 - 30)%60))";
@@ -91,12 +85,6 @@ class FourthViewController: UIViewController {
     
     
     @IBOutlet weak var InfoText: UITextView!
-    //    @IBOutlet weak var TimeLabel1: UILabel!
-    //    @IBOutlet weak var TimeLabel2: UILabel!
-    //    @IBOutlet weak var TimeLabel3: UILabel!
-    //    @IBOutlet weak var TimeLabel4: UILabel!
-    //    @IBOutlet weak var TimeLabel5: UILabel!
-    //    @IBOutlet weak var TimeLabel6: UILabel!
     
     @IBOutlet weak var Button1: UIButton!
     @IBOutlet weak var Button2: UIButton!
@@ -128,14 +116,4 @@ class FourthViewController: UIViewController {
     @IBAction func Button6(_ sender: Any) {
         client.sendMessage(message: label6 + "\n")
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
